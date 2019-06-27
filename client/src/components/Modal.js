@@ -2,8 +2,8 @@ import React from 'react'
 import { Button, Header, Icon, Image, Modal } from 'semantic-ui-react'
 import './Modal.scss';
 
-const TicketModal = ({btnText, header, planet, }) => (
-  <Modal trigger={<Button className="green">{btnText}</Button>}>
+const TicketModal = ({btnText, header, planet}) => (
+  <Modal trigger={<Button className="green">{btnText}</Button>} closeIcon>
     <Modal.Header>{header}</Modal.Header>
     <Modal.Content image>
       <Modal.Description>

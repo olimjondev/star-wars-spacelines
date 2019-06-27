@@ -15,7 +15,7 @@ class App extends Component {
             return(
                 <>
                     <PlanetScene />
-                    <Modal btnText={`Buy ticket to ${planet.name}`} header="Ticket Details" planet={planet} />
+                    <Modal btnText={`Buy a ticket to ${planet.name}`} header="Ticket Details" planet={planet} />
                 </>
             )
         }
