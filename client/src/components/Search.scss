@@ -1,0 +1,20 @@
+.ui.search{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    .prompt{
+        border-radius: .28571429rem;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        &:focus{
+            background: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+    .search.icon{
+        color: #fff;
+    }
+}

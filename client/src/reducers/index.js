@@ -5,7 +5,11 @@ import {
     CONNECTION_SUCCESS,
     DATA_RECIEVED,
     DATA_REQUEST,
-    FETCH_PLANETS
+    FETCH_PLANETS,
+    FILTER_PLANETS,
+    CLEAR_FILTER_RESULT,
+    QUERY,
+    FILTER_FIRST_OR_DEFAULT
 } from '../types';
 
 const errors = (state = {status: false, message: ''}, action) =>{
@@ -45,8 +49,36 @@ const fetchPlanets = (state = {isFetching: false, items: []}, action) =>{
     }
 }
 
+const filter = (state = {results: [], query: null, firstOrDefault: null}, action) =>{
+    switch(action.type){
+        case FILTER_PLANETS:
+            return {
+                ...state,
+                results: action.payload
+            }
+        case CLEAR_FILTER_RESULT:
+            return {
+                ...state,
+                results: action.payload
+            };
+        case QUERY:
+            return {
+                ...state,
+                query: action.payload
+            };
+        case FILTER_FIRST_OR_DEFAULT:
+            return {
+                ...state,
+                firstOrDefault: action.payload
+            };
+        default:
+            return state;
+    }
+} 
+
 export default combineReducers({
     form,
+    filter,
     planets: fetchPlanets,
     errors
 });

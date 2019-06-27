@@ -1,0 +1,22 @@
+.ui.modal{
+    background: transparent;
+    border: 1px solid #fff;
+    .header, .image.content, .actions{
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+    }
+    &>.header{
+        border-bottom: 1px solid #fff;
+    }
+    &>.actions{
+        border-top: 1px solid #fff;
+    }
+    .ui.primary.button{
+        background: transparent;
+        border: 1px solid #fff;
+        &:hover{
+            background: #fff;
+            color: #000;
+        }
+    }
+}
