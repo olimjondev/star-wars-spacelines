@@ -21,14 +21,14 @@
         max-width: 400px;
         max-height: 400px;
         .content{
+            position: absolute;
             span{
                 display: block;
             }
         }
         &.content-left{
             .content{
-                float: left;
-                text-align: left;
+                left: 0;
                 @media all and (max-width: 567px){
                     float: none;
                     text-align: center;
@@ -37,8 +37,7 @@
         }
         &.content-right{
             .content{
-                float: right;
-                text-align: right;
+                right: 0;
                 @media all and (max-width: 567px){
                     float: none;
                     text-align: center;
