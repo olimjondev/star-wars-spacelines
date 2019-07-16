@@ -1,0 +1,21 @@
+type Query{
+    planets: [Planet]
+    searchPlanet(query: String!): [Planet]
+}
+
+type Planet{
+    name: String!
+    rotation_period: Int
+    orbital_period: Int
+    diameter: Int
+    climate: String
+    gravity: String
+    terrain: String
+    surface_water: Int
+    population: Int
+    residents:[String]
+    films: [String]
+    created: String
+    edited: String
+    url: String
+}
